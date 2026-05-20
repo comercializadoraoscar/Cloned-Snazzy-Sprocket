@@ -1,17 +1,17 @@
 services:
   db:
     image: mysql:8.0
-    container_name: snazzy_db
+    container_name: cloned_snazzy_db
     restart: always
     ports:
-      - "3306:3306"
+      - "3307:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: snazzy_db
       MYSQL_USER: oscar_dev
       MYSQL_PASSWORD: dev_password
     volumes:
-      - db_data:/var/lib/mysql
+      - cloned_db_data:/var/lib/mysql
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-proot_password"]
       interval: 10s
@@ -21,12 +21,12 @@ services:
 
   wordpress:
     build: .
-    container_name: snazzy_wp
+    container_name: cloned_snazzy_wp
     depends_on:
       db:
         condition: service_healthy
     ports:
-      - "8080:80"
+      - "8081:80"
     restart: always
     environment:
       WORDPRESS_DB_HOST: db
@@ -39,4 +39,4 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
 volumes:
-  db_data:
+  cloned_db_data:

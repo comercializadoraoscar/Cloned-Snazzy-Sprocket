@@ -32,7 +32,7 @@ The objective was to transform provided Figma designs into a fully functional, m
 
 ## Technical Stack
 * **Backend:** WordPress (PHP)
-* **Frontend:** Tailwind CSS, Alpine.js
+* **Frontend:** Tailwind CSS
 * **Environment:** Docker-based local development (Docker Compose)
 * **Data Layer:** Custom Post Types, Taxonomies, and ACF
 
@@ -45,5 +45,5 @@ The objective was to transform provided Figma designs into a fully functional, m
     docker compose up -d --build
     ```
     *(Note: The database will automatically seed on the first run using the included `init.sql` file).*
-4.  **Access the frontend:** Navigate to `http://localhost:8080`.
-5.  **Access the WordPress Admin:** Navigate to `http://localhost:8080/wp-admin`.
+4.  **Access the frontend:** Navigate to `http://localhost:8081`.
+5.  **Access the WordPress Admin:** Navigate to `http://localhost:8081/wp-admin`.
