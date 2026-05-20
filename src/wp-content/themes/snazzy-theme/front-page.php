@@ -21,7 +21,7 @@ get_header(); ?>
                         Snazzy Sprocket crafts high-performance digital experiences for ambitious brands. Strategy, design, and engineering — all under one roof.
                     </p>
                     <div class="flex flex-wrap gap-4">
-                        <a href="#featured-work" class="bg-[#00D4AA] text-[#0B0F1A] font-['DM_Sans'] font-bold text-[13px] leading-[21.45px] tracking-[0.52px] uppercase px-6 py-2 rounded-[2px] transition-colors border border-gray-800 hover:bg-[#0B0F1A] hover:text-[#00D4AA] flex items-center">
+                        <a href="<?php echo esc_url(home_url('/our-work/')); ?>" class="bg-[#00D4AA] text-[#0B0F1A] font-['DM_Sans'] font-bold text-[13px] leading-[21.45px] tracking-[0.52px] uppercase px-6 py-2 rounded-[2px] transition-colors border border-gray-800 hover:bg-[#0B0F1A] hover:text-[#00D4AA] flex items-center">
                             VIEW OUR WORK &rarr;
                         </a>
                         <a href="/contact" class="border border-gray-600 text-[#9BA3C2] font-['DM_Sans'] font-bold text-[13px] leading-[21.45px] tracking-[0.52px] capitalize px-6 py-2 rounded-[2px] transition-colors hover:border-[#00D4AA] hover:text-[#00D4AA]">
