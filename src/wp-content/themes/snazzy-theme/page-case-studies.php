@@ -44,8 +44,10 @@ get_header(); ?>
                         <article class="bg-white rounded overflow-hidden shadow-sm border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col h-full">
                             <!-- Thumbnail -->
                             <div class="aspect-video w-full bg-[#E5E7EB] overflow-hidden relative">
-                                <?php if ( has_post_thumbnail() ) : ?>
-                                    <?php the_post_thumbnail( 'large', array( 'class' => 'w-full h-full object-cover group-hover:scale-105 transition-transform duration-500' ) ); ?>
+                                <?php 
+                                $image_url = snazzy_get_case_study_image_url( get_the_ID() );
+                                if ( $image_url ) : ?>
+                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 <?php else : ?>
                                     <!-- Placeholder if no image -->
                                     <div class="w-full h-full flex items-center justify-center text-[#6B7394] font-['DM_Sans'] text-sm bg-gray-100">

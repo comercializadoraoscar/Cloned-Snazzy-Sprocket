@@ -123,8 +123,10 @@ get_header(); ?>
 
                         <article class="group cursor-pointer">
                             <div class="aspect-[4/3] bg-gray-800 mb-6 overflow-hidden">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover group-hover:scale-105 transition duration-500']); ?>
+                                <?php 
+                                $image_url = snazzy_get_case_study_image_url( get_the_ID() );
+                                if ( $image_url ) : ?>
+                                    <img src="<?php echo esc_url($image_url); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
                                 <?php else: ?>
                                     <div class="w-full h-full flex items-center justify-center text-gray-500 font-mono text-sm">Project Image - 800 x 600</div>
                                 <?php endif; ?>
