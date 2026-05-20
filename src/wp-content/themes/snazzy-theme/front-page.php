@@ -164,7 +164,7 @@ get_header(); ?>
             </div>
 
             <div class="text-center mt-12">
-                <a href="<?php echo esc_url(get_post_type_archive_link('case_study')); ?>" class="inline-block border-2 border-gray-900 text-gray-900 font-bold px-8 py-4 hover:bg-gray-900 hover:text-white transition duration-300">
+                <a href="<?php echo esc_url(home_url('/case-studies/')); ?>" class="inline-block border-2 border-gray-900 text-gray-900 font-bold px-8 py-4 hover:bg-gray-900 hover:text-white transition duration-300">
                     VIEW ALL CASE STUDIES &rarr;
                 </a>
             </div>
